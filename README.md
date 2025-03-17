@@ -79,8 +79,7 @@ The itinerary reconstruction problem is essentially finding an Eulerian path in 
 1. Build a graph where each airport is a node and each flight is a directed edge.
 2. Sort the destinations for each source in lexicographical order to ensure we always pick the lexicographically smallest destination first.
 3. Find a starting point:
-   - If JFK is in the graph, start from there (as per the example).
-   - Otherwise, find a node with more outgoing than incoming edges (which is a property of the starting node in an Eulerian path).
+   - Find a node with more outgoing than incoming edges (which is a property of the starting node in an Eulerian path).
    - If no such node exists, pick any node.
 4. Use depth-first search (DFS) to find the Eulerian path, adding airports to the itinerary in reverse order.
 
